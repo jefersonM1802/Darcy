@@ -1,0 +1,338 @@
+
+html{
+    font-size: 62.5%;/* EQUIVALE A 10 PX */
+    font-family: 'Poppins',sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 2rem;
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+.container-hero{
+    background-color:  #f9f5f0;;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.container-logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+     
+}
+.container-logo i {
+    font-size: 3rem;
+}
+.container-logo h1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+/* CARRITO DE COMPRA */
+.fa-basket-shopping{
+    font-size: 3rem;
+    color: black;
+    padding-left: 1rem;
+}
+.content-shopping-cart{
+    display: flex;
+    flex-direction: column;
+}
+/* navbar */
+.container-navbar{
+    background-color: rgb(217, 136, 224);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    
+}
+.navbar .fa-bars{
+    display: none;
+}
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+.menu li{
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+.menu a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+.menu a:hover::after{
+    opacity: 1;
+}
+.menu a:hover{
+    color: #fff;
+}
+/* desplegable */
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+.navbar ul li a{
+    font-size: 1.3rem;
+    padding:  15px;
+    color: black;
+    display: block;
+
+}
+.navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color:rgb(217, 136, 224) ;
+    display: none;
+}
+.navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid #fff;
+}
+.navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+.navbar ul li:focus-within> ul, .navbar ul li:hover>ul{
+    display: initial;
+}
+.busqueda{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    background-color: #fff;
+    height: 4.4rem;
+    overflow: hidden;
+
+}
+.busqueda input{
+    outline: none;
+    font-family: inhert;
+    border: none;
+    width: 25rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #777;
+    cursor: pointer;
+
+}
+.busqueda input::-webkit-search-cancel-button{
+    appearance: none;
+}
+.busqueda .btn-search{
+    border: none;
+    background-color:rgb(217, 136, 224) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 1rem;
+}
+.btn-search i{
+    font-size: 2rem;
+}
+/* MAIN */
+.main-content{
+    background-color: #f9f5f0;
+}
+.informacion{
+    width: 120em;
+    padding: 4rem;
+    margin: 0 auto;
+}
+.tiendas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:rgb(254, 237, 255);
+}
+.tiendas img{
+    width: 100%;
+    padding: 0 19em;
+}
+.tiendas p{
+    text-align: center;
+    font-size: 2em;
+    padding: 2rem;
+}
+.tiendas .dos{
+    height: 60%;
+
+}
+/* FOOTER */
+.footer{
+    background-color: rgb(217, 136, 224);
+}
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+.menu-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 40rem;
+    gap: 3rem;
+    justify-items: center;
+}
+.title-footer{
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.contact-info,
+.information,
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact-info ul,
+.information ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact-info ul li,
+.information  ul li{
+    list-style: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+
+}
+.information ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+.information ul li a:hover{
+    color: #000;
+}
+.social-icons{
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icons span{
+    border-radius:50% ;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons span i{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.facebook{
+    background-color: #3b5998;
+}
+.twitter{
+    background-color: #00acee;
+}
+.youtube{
+    background-color: #c4302b;
+}
+.pinterest{
+  background-color: #c8232c;
+
+}
+.instagram{
+    background:linear-gradient(
+        #405de6,
+        #833ab4,
+        #c13584,
+        #E1306C,
+        #fd1d1d,
+        #f56040,
+        #fcaf45
+    );
+}
+.content p{
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 300;
+}
+.content input{
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom:  2px solid #d2b495;
+    cursor: pointer;
+    padding: .5rem 0 1.2rem;
+    color: #000;
+    display: block;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    font-family: inherit;
+    
+}
+.content input::-webkit-input-placeholder{
+    color: #eee;
+
+}
+.content button{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+}
+.content button:hover{
+    background-color: #f9f5f0;
+    color: rgb(217, 136, 224);
+}
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #d2b495;
+}
+.copyright p{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
